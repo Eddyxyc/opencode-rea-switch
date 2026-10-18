@@ -1,0 +1,39 @@
+{
+  "name": "opencode-rea-switch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenCode plugin: a master switch that turns REA off, plus a switch between the full and the compact REA MCP tool set",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddyxyc/opencode-rea-switch.git"
+  },
+  "exports": {
+    ".": "./server.ts",
+    "./tui": "./tui.tsx",
+    "./contract": "./contract.ts"
+  },
+  "files": [
+    "server.ts",
+    "tui.tsx",
+    "contract.ts",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "test:tui": "bun test/tui-probe.mjs",
+    "probe": "node test/probe.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@opencode/client": "2.0.28",
+    "@opencode/plugin": "2.0.28",
+    "@opencode/theme": "2.0.28",
+    "@opentui/core": "0.5.17",
+    "@opentui/solid": "0.5.17",
+    "@types/node": "^24.0.0",
+    "solid-js": "1.9.12",
+    "typescript": "5.8.2"
+  }
+}
